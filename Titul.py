@@ -151,7 +151,40 @@
 # a = 82 // 3**2 % 7
 # print(a)
 
+# b = int(input())
+# q = int(input())    
+# n = int(input())
+# print(b* q**(n-1))
+
+# a = int(input())
+# print(a // 100)
+
+a = int(input())
 b = int(input())
-q = int(input())    
+print(b // a)
+print(a // b)
+
+a, b = int(input()), int(input())
+print(b // a, b % a, sep = '\n')
+
+Запишем формулу для вычисления i-й цифры n-значного числа num в общем виде:
+
+(num // 10 ** (n - i)) % 10
+
+num = int(input())
+digit3 = num % 10
+digit2 = (num // 10) % 10
+digit1 = num // 100
+
+print(digit1, digit2, digit3, sep=',')
+
+a = int(input())
+d3 = a % 10
+d2 = (a // 10) % 10
+d1 = a // 100
+print(f'{d1}{d2}{d3}', f'{d1}{d3}{d2}', f'{d2}{d1}{d3}', f'{d2}{d3}{d1}', f'{d3}{d1}{d2}', f'{d3}{d2}{d1}', sep='\n')
+
 n = int(input())
-print(b* q**(n-1))
+nn = int(str(n)+str(n))
+nnn = int(str(n)+str(n)+str(n))
+print(n+nn+nnn)
